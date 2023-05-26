@@ -43,7 +43,7 @@
 
 ### Releases v2.8.2 (gitcnd/Chris Drake)
 
-1. Add support for selecting whatever customer SPI pins you want to use
+1. Add support for selecting whatever custom SPI pins you want to use
 
 ### Releases v2.8.1
 
