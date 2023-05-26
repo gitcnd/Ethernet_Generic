@@ -1,3 +1,22 @@
+## Ethernet_Generic (updated) v2.8.2
+
+This is a fork of khoih-prog/Ethernet_Generic v2.8.1 with one modification which allows you to specify any custom pins you want for the SPI to use.
+
+To use these changes, put the following #defines into your sketch *BEFORE* the `#include "Ethernet_Generic.h"` line:-
+
+`
+#define PIN_SCK  14
+#define PIN_MOSI 2
+#define PIN_MISO 15
+#define PIN_SS   0
+#define USING_SPI2              true	// optional
+#include "Ethernet_Generic.h"
+...
+Ethernet.init (PIN_SS);
+`
+
+*NOTE*: Tested and working only on an AI-Thinker ESP32S-Cam using a W5500 sheild and the above pins (works OK, and co-exists fine with the Camera, SD-Card, and FLASH etc).  Should work on everything if the hardware supports it.
+
 ## Ethernet_Generic
 
 [![arduino-library-badge](https://www.ardu-badge.com/badge/Ethernet_Generic.svg?)](https://www.ardu-badge.com/Ethernet_Generic)

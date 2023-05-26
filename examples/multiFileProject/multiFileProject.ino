@@ -8,7 +8,7 @@
 
 // To demo how to include files in multi-file Projects
 
-#define ETHERNET_GENERIC_VERSION_MIN_TARGET      "Ethernet_Generic v2.8.1"
+#define ETHERNET_GENERIC_VERSION_MIN_TARGET      "Ethernet_Generic v2.8.2"
 #define ETHERNET_GENERIC_VERSION_MIN             2008001
 
 #include "multiFileProject.h"

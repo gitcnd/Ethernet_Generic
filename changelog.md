@@ -16,6 +16,7 @@
 
 
 * [Changelog](#changelog)
+	* [Releases v2.8.2](#releases-v282)
 	* [Releases v2.8.1](#releases-v281)
 	* [Releases v2.8.0](#releases-v280)
 	* [Releases v2.7.1](#releases-v271)
@@ -39,6 +40,10 @@
 ---
 
 ## Changelog
+
+### Releases v2.8.2 (gitcnd/Chris Drake)
+
+1. Add support for selecting whatever customer SPI pins you want to use
 
 ### Releases v2.8.1
 

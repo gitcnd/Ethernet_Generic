@@ -13,7 +13,7 @@
 
   Built by Khoi Hoang https://github.com/khoih-prog/EthernetWebServer
 
-  Version: 2.8.1
+  Version: 2.8.2
 
   Version Modified By   Date      Comments
   ------- -----------  ---------- -----------
@@ -26,6 +26,7 @@
   2.7.1   K Hoang      15/11/2022 Auto-detect W5x00 and settings to set MAX_SIZE to send
   2.8.0   K Hoang      27/12/2022 Add support to W6100 using IPv4
   2.8.1   K Hoang      06/01/2023 Fix W6100 minor bug
+  2.8.2   C Drake      26/05/2023 Add support for SPI custom pins
  *****************************************************************************************************************************/
 
 #pragma once
@@ -323,10 +324,13 @@ uint8_t W5100Class::init(uint8_t socketNumbers, uint8_t new_ss_pin)
   //              ", W5100Class::ss_pin = ", W5100Class::ss_pin);
   ETG_LOGWARN5("W5100 init, using W5100Class::ss_pin = ", W5100Class::ss_pin, ", whereas new ss_pin = ", new_ss_pin,
                ", SS_PIN_DEFAULT =", SS_PIN_DEFAULT);
+  ETG_LOGWARN5("PIN_SCK=", PIN_SCK, ", PIN_MISO=", PIN_MISO, ", PIN_=MOSI", PIN_MOSI );
+  ETG_LOGWARN1("PIN_SS=", PIN_SS );
 
   CH_SIZE = 0x0100; // Default except W6100
 
-  pCUR_SPI->begin();
+  //pCUR_SPI->begin();
+  pCUR_SPI->begin( PIN_SCK, PIN_MISO, PIN_MOSI, PIN_SS ); // cnd
 
   initSS();
   resetSS();
